@@ -25,7 +25,8 @@ class Program
             }
             else if (menuInput == 2)
             {
-                Entry entry = new Entry();
+                anEntry._entryText = Console.ReadLine();
+                
             }
             else if (menuInput == 3)
             {
