@@ -26,11 +26,12 @@ class Program
             else if (menuInput == 2)
             {
                 anEntry._entryText = Console.ReadLine();
+                anEntry.Display();
                 
             }
             else if (menuInput == 3)
             {
-                Journal journal = new Journal();
+                thejournal.DisplayAll();
             }
 
             else 

@@ -7,30 +7,30 @@ public class PromptGenerator
         List<int> numberlist = new List<int> {1,2,3,4};
         var randomVar = new Random();
         int randomNumber = randomVar.Next(numberlist.Count);
-        string returnValue = "";
+        string _returnValue = "";
         if (randomNumber == 1)
         {
-            returnValue = "What was your favorite part about today?";
+            _returnValue = "What was your favorite part about today?";
         }
 
         else if (randomNumber == 2)
         {
-            returnValue = "What Gospel topic has been on your mind?";
+            _returnValue = "What Gospel topic has been on your mind?";
         }
         else if (randomNumber == 3)
         {
-            returnValue = "How is work?";
+            _returnValue = "How is work?";
         }
         else if (randomNumber == 4)
         {
-            returnValue = "What did you do with your family?";
+            _returnValue = "What did you do with your family?";
         }
         else 
         {
-            returnValue = "What is your favorite color?";
+            _returnValue = "What is your favorite color?";
         }
 
-        return returnValue;
+        return _returnValue;
     }
 
 }
