@@ -6,6 +6,7 @@ class Program
     {
         Journal theJournal = new Journal();
         Entry theEntry = new Entry();
+        PromptGenerator prompt = new PromptGenerator();
         int menuInput = 10;
         while (menuInput != 0)
         {
@@ -20,15 +21,16 @@ class Program
             //Give prompt
             if (menuInput == 1)
             {
-                PromptGenerator prompt = new PromptGenerator();
-                Console.WriteLine(prompt);
+                string newPrompt = prompt.GetRandomPrompt();
+                Console.WriteLine(newPrompt);
             }
             // Write an entry
             else if (menuInput == 2)
             {
-                theEntry._entryText = Console.ReadLine();
+                string newEntry = Console.ReadLine();
+                theEntry._entryText = newEntry;
                 theEntry.Display();
-                theJournal.SaveToFIle(theEntry._entryText);
+                theJournal.SaveToFIle(newEntry);
             }
             //View journal
             else if (menuInput == 3)
