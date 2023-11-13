@@ -4,9 +4,8 @@ class Program
 {
     static void Main(string[] args)
     {
-        Journal thejournal = new Journal();
-        Entry anEntry = new Entry();
-        anEntry.Display();
+        Journal theJournal = new Journal();
+        Entry theEntry = new Entry();
         int menuInput = 10;
         while (menuInput != 0)
         {
@@ -18,20 +17,23 @@ class Program
             string menustring = Console.ReadLine();
             menuInput = int.Parse(menustring);
 
+            //Give prompt
             if (menuInput == 1)
             {
                 PromptGenerator prompt = new PromptGenerator();
                 Console.WriteLine(prompt);
             }
+            // Write an entry
             else if (menuInput == 2)
             {
-                anEntry._entryText = Console.ReadLine();
-                anEntry.Display();
-                
+                theEntry._entryText = Console.ReadLine();
+                theEntry.Display();
+                theJournal.SaveToFIle(theEntry._entryText);
             }
+            //View journal
             else if (menuInput == 3)
             {
-                thejournal.DisplayAll();
+                theJournal.DisplayAll();
             }
 
             else 
