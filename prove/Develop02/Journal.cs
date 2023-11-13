@@ -1,21 +1,18 @@
 public class Journal
 {
-    public List<Entry> _entries;
-    public void AddEntry(Entry newEntry)
-    {
-        _entries.Add(newEntry);
-    }
+    public List<string> _journalEntries;
+
 
     public void DisplayAll()
     {
-        foreach (Entry i in _entries)
+        foreach (string i in _journalEntries)
         {
             Console.WriteLine(i);
         }
     }
 
-    public void SaveToFIle(string file)
+    public void SaveToFIle(string newEntry)
     {
-        
+        _journalEntries.Add(newEntry);
     }
 }
