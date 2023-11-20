@@ -12,16 +12,18 @@ public class Scripture
         string[] scriptureList = scripture.Split(_remover);
         foreach (string i in scriptureList)
         {
+            //I'm having trouble with this, how do you convert a string to a class object?
             _words.Add(i);
         }
-        HideRandomWords(scriptureList);
     }
 
     public void HideRandomWords(string [] scriptureList)
     {
+        //Also having trouble placing the random word back into the list
         int totalCount = scriptureList.Count();
         Random random = new Random();
         int wordsToHideCount = random.Next(1, totalCount);
+
     }
     public string GetDisplayText()
     {
