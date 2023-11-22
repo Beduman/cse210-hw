@@ -24,6 +24,12 @@ public class Scripture
         Random random = new Random();
         int wordsToHideCount = random.Next(1, totalCount);
 
+        foreach (string word in scriptureList)
+        {
+            Word wordObject = new(word);
+            _words.Add(wordObject);
+        }
+
     }
     public string GetDisplayText()
     {
