@@ -12,7 +12,7 @@ class Program
 
         string scripture = theReference.GetDisplayText();
 
-        string scripturePhrase = theScripture.GetDisplayText();
+        List<string> scripturePhrase = theScripture.GetDisplayText();
         Console.WriteLine(scripture);
         Console.WriteLine(scripturePhrase);
         while (scriptureHidden = false)
@@ -24,8 +24,8 @@ class Program
             userInput = Console.ReadLine();
             if (userInput == "1")
             {
-                //How am I going to make HideRandomWords function
                 scripturePhrase = theScripture.GetDisplayText();
+                theScripture.HideRandomWords(scripturePhrase);
                 Console.WriteLine(scripturePhrase);
                 userInput = " ";
             }
