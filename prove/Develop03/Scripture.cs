@@ -1,11 +1,7 @@
-using System;
-using System.Globalization;
 public class Scripture 
 {
-    private Reference _reference;
-    private List<Word> _words;
+    private List<Word> _words = new List<Word>();
     private char _remover = ' ';
-    List<string> returnText;
     public object Parse { get; }
 
     public Scripture(string scripture)
@@ -21,36 +17,39 @@ public class Scripture
 
     public void HideRandomWords(List<string>scriptureList)
     {
-        //Also having trouble placing the random word back into the list
+        
         int totalCount = scriptureList.Count();
         Random random = new Random();
-        int wordsToHideCount = random.Next(1, totalCount);
 
+        int wordsToHideCount = random.Next(1, totalCount);
         foreach (Word i in _words)
         {
-            
+            int spot = _words.IndexOf(i);
+            if (wordsToHideCount == spot)
+            {   
+                i.Hide();
+            }
         }
 
     }
     public List<string> GetDisplayText()
     {
-        
+        List<string> returnText = new List<string>();
         foreach(Word i in _words)
         {
             bool hidden = i.IsHidden();
-            if (hidden = true)
+            if (hidden == true)
             {
                 string blank = "______";
                 returnText.Add(blank);
 
             }
-            else if (hidden = false)
+            else if (hidden == false)
             {
-                string shown = i;
+                string shown = i.GetDisplayText();
                 returnText.Add(shown);
             }
 
-            Console.WriteLine(returnText);
         }
         return returnText;
     }

@@ -1,3 +1,6 @@
+
+using System.ComponentModel;
+
 public class Word 
 {
     private string _text;
@@ -5,7 +8,7 @@ public class Word
 
     public Word (string words)
     {
-
+       _text = words;
     }
     public void Hide()
     {
@@ -20,8 +23,11 @@ public class Word
     {
         return _isHidden;
     }
+
     public string GetDisplayText()
     {
-        return " ";
+        return _text;
     }
+
+
 }
