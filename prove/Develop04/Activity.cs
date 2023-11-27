@@ -21,7 +21,9 @@ public class Activity
     }
     public void DisplayStartingMessage()
     {
-
+        Console.WriteLine(_name + ": " + _description);
+        Console.WriteLine("How long do you want this activity to last in seconds?");
+        _duration = int.Parse(Console.ReadLine());
     }
 
     public void DiplayEndingMessage()
@@ -34,8 +36,16 @@ public class Activity
 
     }
 
-    public void ShowCountdown()
+    public void ShowCountdown(int time)
     {
-
+        int timerUp = 0;
+        while (timerUp <= time)
+        {
+            Thread.Sleep(1000);
+            timerUp = timerUp + 1;
+            Console.Write(timerUp);
+            
+        }
+        Console.WriteLine();
     }
 }

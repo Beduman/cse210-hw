@@ -12,8 +12,6 @@ public class BreathingActivity : Activity
     {
         DisplayStartingMessage();
 
-        Console.WriteLine("How long would you like to do this exercise in seconds?");
-        _duration = int.Parse(Console.ReadLine());
         DateTime startTime = DateTime.Now;
         DateTime futureTime = startTime.AddSeconds(_duration);
 
@@ -21,10 +19,11 @@ public class BreathingActivity : Activity
         {
             Console.WriteLine("Breath in");
             //animation
-            ShowCountdown();
+            ShowCountdown(5);
+            startTime = DateTime.Now;
             Console.WriteLine("Breath out");
             //animation
-            ShowCountdown();
+            ShowCountdown(5);
 
             startTime = DateTime.Now;
         }

@@ -5,6 +5,8 @@ class Program
     static void Main(string[] args)
     {
         BreathingActivity breathing1 = new BreathingActivity();
+        ReflectingActivity reflecting1 = new ReflectingActivity();
+        ListingActivity listing1 = new ListingActivity();
         string userInput = " ";
         Console.WriteLine("Welcome to the activity program!");
         Console.WriteLine("In this program you have the option to choose a "+
@@ -20,6 +22,20 @@ class Program
             {
                 breathing1.Run();
                 userInput = " ";
+            }
+            else if(userInput == "2")
+            {
+                listing1.Run();
+                userInput = " ";
+            }
+            else if(userInput == "3")
+            {
+                reflecting1.Run();
+                userInput = " ";
+            }
+            else
+            {
+                Console.WriteLine("Please input one number through 1 and 4");
             }
         }
     }
