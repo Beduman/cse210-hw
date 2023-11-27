@@ -12,6 +12,8 @@ class Program
         while(userInput != "4")
         {
             Console.WriteLine("Enter '1' for the breathing activity");
+            Console.WriteLine("Enter '2' for the listing activity");
+            Console.WriteLine("Enter '3' for the reflecting activity");
             Console.WriteLine("Enter '4' to exit the program");
             userInput = Console.ReadLine();
             if(userInput == "1")

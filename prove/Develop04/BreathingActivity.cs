@@ -10,7 +10,8 @@ public class BreathingActivity : Activity
     }
     public void Run()
     {
-        Console.WriteLine(_name + ": " + _description);
+        DisplayStartingMessage();
+
         Console.WriteLine("How long would you like to do this exercise in seconds?");
         _duration = int.Parse(Console.ReadLine());
         DateTime startTime = DateTime.Now;
@@ -20,28 +21,10 @@ public class BreathingActivity : Activity
         {
             Console.WriteLine("Breath in");
             //animation
-            Thread.Sleep(1000);
-            Console.Write("4");
-            Thread.Sleep(1000);
-            Console.Write("3");
-            Thread.Sleep(1000);
-            Console.Write("2");
-            Thread.Sleep(1000);
-            Console.WriteLine("1");
-            Thread.Sleep(1000);
+            ShowCountdown();
             Console.WriteLine("Breath out");
             //animation
-            Thread.Sleep(1000);
-            Console.Write("5");
-            Thread.Sleep(1000);
-            Console.Write("4");
-            Thread.Sleep(1000);
-            Console.Write("3");
-            Thread.Sleep(1000);
-            Console.Write("2");
-            Thread.Sleep(1000);
-            Console.WriteLine ("1");
-            Thread.Sleep(1000);
+            ShowCountdown();
 
             startTime = DateTime.Now;
         }
