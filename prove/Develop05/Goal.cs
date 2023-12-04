@@ -2,25 +2,20 @@ using System.IO;
 
 public class Goal
 {
-    private string _shortName;
-    private string _description;
-    private string _points;
+    protected string _shortName;
+    protected string _description;
+    protected int _points;
 
 
-    Goal(string name, string description, string points)
+    public Goal(string name, string description, string points)
     {
 
     }
+    public Goal(){}
 
     virtual public void RecordEvent()
     {
-        Console.WriteLine("Please record your goal");
-        string fileName = "myGoals.txt";
-        using (StreamWriter outputFile = new StreamWriter(fileName))
-        {
-            string outputInput = Console.ReadLine();
-            outputFile.WriteLine(outputInput);
-        }
+
     }
     public bool IsComplete()
     {
@@ -35,5 +30,9 @@ public class Goal
     public string GetStringRepresentation()
     {
         return "";
+    }
+        public int GetPoints()
+    {
+        return _points;
     }
 }

@@ -1,5 +1,9 @@
-public class ChecklistGoal
+public class ChecklistGoal : Goal
 {
+    public ChecklistGoal() : base()
+    {
+        
+    }
     int _amountCompleted;
     int _target;
     int _bonus;
