@@ -17,7 +17,25 @@ public class GoalManager
     }
     public void CreateEvent()
     {
-        
+        Console.WriteLine("Choose a goal to make an event.");
+        _lines = System.IO.File.ReadAllLines(_fileName);
+        string editGoal;
+        foreach (string line in _lines)
+            {
+                string userInput = "0";
+                Console.WriteLine(line);
+                Console.WriteLine("Is this the goal you want to edit?");
+                Console.WriteLine("1. yes");
+                Console.WriteLine("2. no");
+                userInput = Console.ReadLine();
+                if (userInput == "1" || userInput == "2")
+                {
+                    editGoal = line;
+                    break;
+                }
+                else{}
+            }
+
     }
     public void CreateGoal()
     {
