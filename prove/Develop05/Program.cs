@@ -30,13 +30,17 @@ class Program
             }
             else if(userInput == "2")
             {
-                
+                goalManager1.RetrieveGoals();
                 userInput = " ";
             }
             else if(userInput == "3")
             {
                 
                 userInput = " ";
+            }
+            else if(userInput == "4")
+            {
+
             }
             else
             {
