@@ -20,9 +20,8 @@ class Program
             Console.WriteLine();
             Console.WriteLine("1. Create new goal");
             Console.WriteLine("2. List goals");
-            Console.WriteLine("3. Load goals");
-            Console.WriteLine("4. Create an event");
-            Console.WriteLine("5. Exit the Program");
+            Console.WriteLine("3 Create an entry");
+            Console.WriteLine("Enter '4' to exit the program");
             userInput = Console.ReadLine();
             if(userInput == "1")
             {
@@ -36,15 +35,10 @@ class Program
             }
             else if(userInput == "3")
             {
-                
-                userInput = " ";
-            }
-            else if(userInput == "4")
-            {
                 goalManager1.CreateEvent();
                 userInput = " ";
             }
-            else if(userInput == "5")
+            else if(userInput == "4")
             {
 
             }
