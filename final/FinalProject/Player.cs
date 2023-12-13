@@ -1,28 +1,12 @@
 using System;
 
-public class Player
+public class Player : Character
 {
-    //total stats
-    protected int _totalHealth;
-    protected int _totalAttack;
-    protected int _totalbreakattack;
-    protected int _totalSpeed;
-    protected int _totalDefense;
-    protected int _totalBreak;
-    //current stats
-    public int _health;
-    public int _attack;
-    public int _breakattack;
-    public int _speed;
-    public int _defense;
-    public int _break;
 
-    //adding stats
-    public int _currentSpeed;
 
     public string _className;
 
-    public Player(int newClass)
+    public Player(int newClass) : base()
     {
         SetNewClass(newClass);
     }
