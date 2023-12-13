@@ -22,35 +22,35 @@ public class Character
 
     public string _className;
 
-    public Character(int newClass)
+    public Character()
     {
-        SetNewClass(newClass);
+
     }
     protected virtual void SetNewClass(int newClass)
     {
 
     }
-    public void SetRogue()
+    protected virtual void SetRogue()
     {
         SetStats(90, 40, 1, 100, 50, 2);
         _className = "rogue";
     }
-    public void SetBreaker()
+    protected virtual void SetBreaker()
     {
         SetStats(110, 10, 3, 80, 60, 4);
         _className = "breaker";
     }
-    public void SetTank()
+    protected virtual void SetTank()
     {
         SetStats(150, 10, 1, 60, 100, 6);
         _className = "tank";
     }
-    public void SetCaster()
+    protected virtual void SetCaster()
     {
         SetStats(90, 20, 2, 90, 50, 2);
         _className = "caster";
     }
-    public void SetStats(int health, int attack, int breakattack, int speed, int defense, int breakbar)
+    protected virtual void SetStats(int health, int attack, int breakattack, int speed, int defense, int breakbar)
     {
         _totalHealth = health;
         _totalAttack = attack;
