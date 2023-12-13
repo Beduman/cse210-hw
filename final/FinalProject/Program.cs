@@ -45,7 +45,7 @@ class Program
         Player player3 = new Player(userInt);
 
         Console.WriteLine("Now it's time for combat, you'll be up against 3 breakers");
-        Combat combat1 = new Combat(player1, player2, player3, enemy1, enemy2, enemy3);
+        MultiCombat combat1 = new MultiCombat(player1, player2, player3, enemy1, enemy2, enemy3);
 
         combat1.Run();
 
