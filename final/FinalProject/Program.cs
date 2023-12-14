@@ -44,10 +44,11 @@ class Program
         userInt = int.Parse(userInput);
         Player player3 = new Player(userInt);
 
-        Console.WriteLine("Now it's time for combat, you'll be up against 1 enemy");
-        SingleCombat combat1 = new SingleCombat(player1, enemy1);
+        SingleCombat combat1 = new SingleCombat();
+        combat1.SetCharacters(player1, enemy1);
         combat1.Run();
 
+        Console.WriteLine("Now it's time for combat with all players");
         MultiCombat combat2 = new MultiCombat(player1, player2, player3, enemy1, enemy2, enemy3);
 
         combat2.Run();
