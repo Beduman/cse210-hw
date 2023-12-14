@@ -11,24 +11,17 @@ public class SingleCombat : Combat
     
     void Run()
     {
+        Console.WriteLine("Welcome to combat");
         //current stat update
-        _player1._speed = _player1._totalSpeed;
-        _player1._currentSpeed = _player1._speed;
-        _player1._health = _player1._totalHealth;
-        _player1._attack = _player1._totalAttack;
-        _player1._defense = _player1._totalDefense;
-
-        _enemy1._speed = _enemy1._totalSpeed;
-        _enemy1._currentSpeed = _enemy1._speed;
-        _enemy1._health = _enemy1._totalHealth;
-        _enemy1._attack = _enemy1._totalAttack;
-        _enemy1._defense = _enemy1._totalDefense;
+        _player1.ResetStats();
+        _enemy1.ResetStats();
 
 
         while (_enemy1._health <= 0 || _player1._health <= 0)
         {
             CombatRotation();
         }
+
     }
     void CombatRotation()
     {
