@@ -5,7 +5,10 @@ public class Player : Character
 
 
     public string _className;
-
+    public Player()
+    {
+        
+    }
     public Player(int newClass) : base()
     {
         SetNewClass(newClass);

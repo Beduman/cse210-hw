@@ -8,6 +8,10 @@ public class Enemy : Character
     {
 
     }
+    public Enemy()
+    {
+        
+    }
     protected virtual void SetNewClass(int newClass)
     {
 

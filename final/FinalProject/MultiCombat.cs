@@ -6,8 +6,7 @@ using System.Runtime.CompilerServices;
 public class MultiCombat : Combat
 {
 
-    private int _totalplayerhp;
-    private int _totalenemyhp;
+
     List<Player> _combatRotation;
     public MultiCombat(Player player1, Player player2, Player player3, Enemy enemy1, Enemy enemy2, Enemy enemy3)
     {
@@ -35,10 +34,16 @@ public class MultiCombat : Combat
 
                 if (player._health > 0)
                 {
+                    Console.WriteLine(player._className + " is knocked out");
                     _combatRotation.Remove(player);
                 }
             }
             _combatRotation.OrderBy(Player => Player._speed);
+
+        }
+
+        public void CombatTurn()
+        {
 
         }
 }

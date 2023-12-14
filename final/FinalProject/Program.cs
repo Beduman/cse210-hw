@@ -19,7 +19,7 @@ class Program
         Console.WriteLine("A breaker is about destroying armor");
         Console.WriteLine("A tank is about taking hits without falling");
         Console.WriteLine("1. Assassin");
-        Console.WriteLine("2. Braker");
+        Console.WriteLine("2. Breaker");
         Console.WriteLine("3. Tank");
         Console.WriteLine("4. Caster");
         userInput = Console.ReadLine();
@@ -28,7 +28,7 @@ class Program
 
         Console.WriteLine("This is for player 2");
         Console.WriteLine("1. Rogue");
-        Console.WriteLine("2. Braker");
+        Console.WriteLine("2. Breaker");
         Console.WriteLine("3. Tank");
         Console.WriteLine("4. Caster");
         userInput = Console.ReadLine();
@@ -37,7 +37,7 @@ class Program
 
         Console.WriteLine("This is for player 3");
         Console.WriteLine("1. Rogue");
-        Console.WriteLine("2. Braker");
+        Console.WriteLine("2. Breaker");
         Console.WriteLine("3. Tank");
         Console.WriteLine("4. Caster");
         userInput = Console.ReadLine();

@@ -4,12 +4,12 @@ public class Character
 {
     protected string _name;
     //total stats
-    protected int _totalHealth;
-    protected int _totalAttack;
-    protected int _totalbreakattack;
-    protected int _totalSpeed;
-    protected int _totalDefense;
-    protected int _totalBreak;
+    public int _totalHealth;
+    public int _totalAttack;
+    public int _totalbreakattack;
+    public int _totalSpeed;
+    public int _totalDefense;
+    public int _totalBreak;
     //current stats
     public int _health;
     public int _attack;

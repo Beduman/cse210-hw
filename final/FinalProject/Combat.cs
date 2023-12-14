@@ -8,7 +8,7 @@ public class Combat
 
     protected int _totalplayerhp;
     protected int _totalenemyhp;
-    List<Player> _combatRotation;
+
     public Combat()
     {
 
@@ -24,6 +24,11 @@ public class Combat
         } 
 
         public virtual void CombatRotation()
+        {
+
+        }
+        
+        public virtual void CombatTurn()
         {
 
         }
