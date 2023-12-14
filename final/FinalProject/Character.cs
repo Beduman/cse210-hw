@@ -4,12 +4,12 @@ public class Character
 {
     protected string _name;
     //total stats
-    public int _totalHealth;
-    public int _totalAttack;
-    public int _totalbreakattack;
-    public int _totalSpeed;
-    public int _totalDefense;
-    public int _totalBreak;
+    protected int _totalHealth;
+    protected int _totalAttack;
+    protected int _totalbreakattack;
+    protected int _totalSpeed;
+    protected int _totalDefense;
+    protected int _totalBreak;
     //current stats
     public int _health;
     public int _attack;
@@ -38,5 +38,14 @@ public class Character
         _totalSpeed = speed;
         _totalDefense = defense;
         _totalBreak = breakbar;
+    }
+    public void ResetStats()
+    {
+        _health = _totalHealth;
+        _attack = _totalAttack;
+        _breakattack = _totalbreakattack;
+        _speed = _totalSpeed;
+        _defense = _totalDefense;
+        _break = _totalBreak;
     }
 }
