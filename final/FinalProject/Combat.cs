@@ -21,20 +21,10 @@ public class Combat
 
             }
 
-
         } 
 
         public virtual void CombatRotation()
         {
-            foreach (Player player in _combatRotation)
-            {
-
-                if (player._health > 0)
-                {
-                    _combatRotation.Remove(player);
-                }
-            }
-            _combatRotation.OrderBy(Player => Player._speed);
 
         }
 }

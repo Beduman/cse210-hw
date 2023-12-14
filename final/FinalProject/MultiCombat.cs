@@ -9,9 +9,9 @@ public class MultiCombat : Combat
     private int _totalplayerhp;
     private int _totalenemyhp;
     List<Player> _combatRotation;
-    public MultiCombat(Player player1, Player player2, Player player3, Player enemy1, Player enemy2, Player enemy3)
+    public MultiCombat(Player player1, Player player2, Player player3, Enemy enemy1, Enemy enemy2, Enemy enemy3)
     {
-        List<Player> _combatRotation = new List<Player>() { player1, player2, player3, enemy1, enemy2, enemy3 };
+        List<Character> _combatRotation = new List<Character>() { player1, player2, player3, enemy1, enemy2, enemy3 };
 
         int _totalplayerhp = player1._health + player2._health + player3._health;
         int _totalenemyhp = enemy1._health + enemy2._health + enemy3._health;
@@ -28,7 +28,7 @@ public class MultiCombat : Combat
 
         } 
 
-        void CombatRotation()
+        public void CombatRotation()
         {
             foreach (Player player in _combatRotation)
             {

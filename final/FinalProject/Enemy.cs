@@ -1,28 +1,10 @@
 using System;
 
-public class Enemy
+public class Enemy : Character
 {
     //total stats
-    protected int _totalHealth;
-    protected int _totalAttack;
-    protected int _totalbreakattack;
-    protected int _totalSpeed;
-    protected int _totalDefense;
-    protected int _totalBreak;
-    //current stats
-    public int _health;
-    public int _attack;
-    public int _breakattack;
-    public int _speed;
-    public int _defense;
-    public int _break;
 
-    //adding stats
-    public int _currentSpeed;
-
-    public string _className;
-
-    public Enemy()
+    public Enemy(int enemyClass)
     {
 
     }
@@ -30,33 +12,20 @@ public class Enemy
     {
 
     }
-    protected virtual void SetRogue()
+    protected virtual void Set1()
     {
-        SetStats(90, 40, 1, 100, 50, 2);
-        _className = "rogue";
+        SetStats(80, 35, 1, 100, 50, 2);
+        _name = "bad guy";
     }
-    protected virtual void SetBreaker()
+    protected virtual void Set2()
     {
-        SetStats(110, 10, 3, 80, 60, 4);
-        _className = "breaker";
+        SetStats(100, 8, 3, 80, 60, 4);
+        _name = "nerd";
     }
-    protected virtual void SetTank()
+    protected virtual void Set3()
     {
-        SetStats(150, 10, 1, 60, 100, 6);
-        _className = "tank";
+        SetStats(1140, 8, 1, 60, 100, 6);
+        _name = "Meanie";
     }
-    protected virtual void SetCaster()
-    {
-        SetStats(90, 20, 2, 90, 50, 2);
-        _className = "caster";
-    }
-    protected virtual void SetStats(int health, int attack, int breakattack, int speed, int defense, int breakbar)
-    {
-        _totalHealth = health;
-        _totalAttack = attack;
-        _totalbreakattack = breakattack;
-        _totalSpeed = speed;
-        _totalDefense = defense;
-        _totalBreak = breakbar;
-    }
+
 }

@@ -7,9 +7,9 @@ class Program
         
         string userInput;
         int userInt = 2;
-        Player enemy1 = new Player(userInt);
-        Player enemy2 = new Player(userInt);
-        Player enemy3 = new Player(userInt);
+        Enemy enemy1 = new Enemy(1);
+        Enemy enemy2 = new Enemy(2);
+        Enemy enemy3 = new Enemy(3);
         Console.WriteLine("Welcome to the turnbased test.");
         Console.WriteLine("This is testing through a console on whether or not combat is fun!");
         Console.ReadLine();
@@ -44,10 +44,13 @@ class Program
         userInt = int.Parse(userInput);
         Player player3 = new Player(userInt);
 
-        Console.WriteLine("Now it's time for combat, you'll be up against 3 breakers");
-        MultiCombat combat1 = new MultiCombat(player1, player2, player3, enemy1, enemy2, enemy3);
-
+        Console.WriteLine("Now it's time for combat, you'll be up against 1 enemy");
+        SingleCombat combat1 = new SingleCombat(player1, enemy1);
         combat1.Run();
+
+        MultiCombat combat2 = new MultiCombat(player1, player2, player3, enemy1, enemy2, enemy3);
+
+        combat2.Run();
 
     }
 }

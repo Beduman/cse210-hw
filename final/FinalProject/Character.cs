@@ -2,6 +2,7 @@ using System;
 
 public class Character
 {
+    protected string _name;
     //total stats
     protected int _totalHealth;
     protected int _totalAttack;
@@ -20,8 +21,6 @@ public class Character
     //adding stats
     public int _currentSpeed;
 
-    public string _className;
-
     public Character()
     {
 
@@ -30,27 +29,8 @@ public class Character
     {
 
     }
-    protected virtual void SetRogue()
-    {
-        SetStats(90, 40, 1, 100, 50, 2);
-        _className = "rogue";
-    }
-    protected virtual void SetBreaker()
-    {
-        SetStats(110, 10, 3, 80, 60, 4);
-        _className = "breaker";
-    }
-    protected virtual void SetTank()
-    {
-        SetStats(150, 10, 1, 60, 100, 6);
-        _className = "tank";
-    }
-    protected virtual void SetCaster()
-    {
-        SetStats(90, 20, 2, 90, 50, 2);
-        _className = "caster";
-    }
-    protected virtual void SetStats(int health, int attack, int breakattack, int speed, int defense, int breakbar)
+    
+    protected void SetStats(int health, int attack, int breakattack, int speed, int defense, int breakbar)
     {
         _totalHealth = health;
         _totalAttack = attack;
