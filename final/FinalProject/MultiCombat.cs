@@ -42,8 +42,33 @@ public class MultiCombat : Combat
 
         }
 
-        public void CombatTurn()
+    void CombatTurn()
+    {
+        string userInput;
+        Console.WriteLine("1. attack");
+        Console.WriteLine("2. Break");
+        Console.WriteLine("3. Block");
+        userInput = Console.ReadLine();
+
+        if (userInput == "1")
         {
+            int damageDealt = _player1._attack - _enemy1._defense;
+            _enemy1._health -= (_player1._attack - _enemy1._defense);
+            Console.WriteLine("You attack the enemy dealing " +damageDealt+ " damage!");
+            _player1._currentSpeed = _player1._currentSpeed - 60;
+        }
+        if (userInput == "2")
+        {
+            _enemy1._break = _enemy1._break - _player1._breakattack;
 
         }
+
+    }
+    void EnemyTurn()
+    {
+        int damageDealt = _enemy1._attack - _player1._defense;
+        _player1._health -= (_enemy1._attack - _player1._defense);
+        Console.WriteLine("The enemy attacks you and you take "+damageDealt+" damage");
+        _enemy1._currentSpeed = _enemy1._currentSpeed - 90;
+    }
 }
