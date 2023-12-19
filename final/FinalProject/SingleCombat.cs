@@ -32,10 +32,18 @@ public class SingleCombat : Combat
     }
     void CombatRotation()
     {
-        Console.WriteLine("Your health: "+_player1._health);
-        Console.WriteLine("Enemy health: "+_enemy1._health);
+        Console.WriteLine("YOU. health: "+_player1._health );
+        Console.WriteLine("ENEMY. health: "+_enemy1._health );
         _player1._currentSpeed = _player1._currentSpeed + _player1._speed;
         _enemy1._currentSpeed = _enemy1._currentSpeed + _enemy1._speed;
+        
+        //breakbar info
+        if (_enemy1._breakbar >= 0)
+        {
+            _enemy1._defense = 0;
+        }
+
+
         if (_player1._currentSpeed > _enemy1._currentSpeed)
         {
             CombatTurn();
@@ -58,21 +66,34 @@ public class SingleCombat : Combat
         {
             int damageDealt = _player1._attack - _enemy1._defense;
             _enemy1._health -= (_player1._attack - _enemy1._defense);
-            Console.WriteLine("You attack the enemy dealing " +damageDealt+ " damage!");
-            _player1._currentSpeed = _player1._currentSpeed - 60;
+            Console.WriteLine("You deal " +damageDealt+ " damage");
+            _player1._currentSpeed = _player1._currentSpeed - 80;
         }
         if (userInput == "2")
         {
-            _enemy1._break = _enemy1._break - _player1._breakattack;
-
+            _enemy1._breakbar = _enemy1._breakbar - _player1._breakattack;
+            Console.WriteLine("You deal " +_player1._breakattack+ " break damage");
+            if (_enemy1._breakbar <= 0)
+            {
+                _enemy1._health = _enemy1._health - 20;
+                Console.WriteLine("You broke the enemy! Dealing 20 damage, and they now take increased damage");
+            }
+            _player1._currentSpeed = _player1._currentSpeed - 60;
+        }
+        if (userInput == "3")
+        {
+            _player1._breakbar = _player1._breakbar + (_player1._breakbar + 2);
+            _player1._currentSpeed = _player1._currentSpeed - 50;
         }
 
     }
     void EnemyTurn()
     {
+        Console.WriteLine("Enemy's turn");
+        Console.ReadKey();
         int damageDealt = _enemy1._attack - _player1._defense;
         _player1._health -= (_enemy1._attack - _player1._defense);
         Console.WriteLine("The enemy attacks you and you take "+damageDealt+" damage");
-        _enemy1._currentSpeed = _enemy1._currentSpeed - 90;
+        _enemy1._currentSpeed = _enemy1._currentSpeed - 80;
     }
 }

@@ -39,7 +39,7 @@ public class Player : Character
     }
     public void SetBreaker()
     {
-        SetStats(110, 20, 3, 80, 10, 4);
+        SetStats(110, 30, 3, 80, 10, 4);
         _className = "breaker";
     }
     public void SetTank()
@@ -59,6 +59,6 @@ public class Player : Character
         _totalbreakattack = breakattack;
         _totalSpeed = speed;
         _totalDefense = defense;
-        _totalBreak = breakbar;
+        _totalBreakbar = breakbar;
     }
 }
